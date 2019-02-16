@@ -5,9 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:To_Do_List_Application"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="#FF959292" Foreground="Black">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="559,180,0,0" VerticalAlignment="Top" Width="75"/>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="208*"/>
+            <ColumnDefinition Width="387*"/>
+            <ColumnDefinition Width="197*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="typeCbx" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Margin="97,74,96,0" Grid.Column="1" Height="22"/>
+        <TextBox x:Name="inputTxt" Grid.Column="1" HorizontalAlignment="Center" Height="23" Margin="97,46,96,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="194"/>
+        <Button x:Name="addBtn" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="150,389,0,0" VerticalAlignment="Top" Width="94"/>
+        <ListBox Grid.Column="1" HorizontalAlignment="Left" Height="258" Margin="97,113,0,0" VerticalAlignment="Top" Width="194"/>
     </Grid>
 </Window>
