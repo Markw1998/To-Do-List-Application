@@ -9,21 +9,21 @@ namespace To_Do_List_Application
     class Task
     {
         public string taskName;
-        public bool taskPriortiy;
         public string taskCategory;
+        public string taskDesc;
 
 
-        public Task(string _taskName, bool _taskPriority, string _taskCategory)
+        public Task(string _taskName, string _taskCategory, string _taskDesc)
         {
             taskName = _taskName;
             taskCategory = _taskCategory;
-            taskPriortiy = _taskPriority;
+            taskDesc = _taskDesc;
         }
 
 
         public override string ToString()
         {
-            return string.Format($"•{taskName}{Environment.NewLine}{taskCategory}");
+            return string.Format($"•{taskName}{Environment.NewLine}{taskCategory}{Environment.NewLine}{taskDesc}");
         }
     }
 }

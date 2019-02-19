@@ -5,7 +5,7 @@ namespace To_Do_List_Application
     public partial class MainWindow : Window
     {
 
-        public string[] types = {"Shopping","School","Gardening","Housework" };
+        public string[] types = {"Shopping","School","Gardening","Housework","Work","Holidays" };
         To_Do myToDoList = new To_Do();
 
 
@@ -22,9 +22,10 @@ namespace To_Do_List_Application
         {
             string input = inputTxt.Text;
             string type = typeCbx.SelectedItem.ToString();
+            string desc = descBox.Text;
 
 
-            myToDoList.AddTask(input,true, type);
+            myToDoList.AddTask(input,type,desc);
             taskBox.Items.Refresh();
 
         }
@@ -39,6 +40,21 @@ namespace To_Do_List_Application
             {
                 myToDoList.Priority(taskBox.SelectedIndex);
             }
+            
+        }
+
+        private void delBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (taskBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select an Item first!");
+            }
+            else
+            {
+                myToDoList.DeleteTask(taskBox.SelectedIndex);
+            }
+
             
         }
     }

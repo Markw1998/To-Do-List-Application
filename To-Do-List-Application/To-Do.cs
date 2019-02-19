@@ -15,15 +15,15 @@ namespace To_Do_List_Application
             Tasks = new ObservableCollection<Task>();
         }
 
-        public void AddTask(string _taskName,bool _taskPriority ,string _taskCategory)
+        public void AddTask(string _taskName, string _taskDesc, string _taskCategory)
         {
-            Task t = new Task(_taskName, _taskPriority , _taskCategory);
+            Task t = new Task(_taskName,_taskDesc, _taskCategory);
             Tasks.Add(t);
         }
 
-        public void DeleteTask()
+        public void DeleteTask(int index)
         {
-
+            Tasks.RemoveAt(index);
         }
 
         public void Priority(int index)
