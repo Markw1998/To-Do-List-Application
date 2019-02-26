@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         xmlns:local="clr-namespace:To_Do_List_Application"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Background="#FF959292" Foreground="Black">
@@ -19,5 +20,7 @@
         <Button x:Name="priorityBtn" Content="Prioritise" Grid.Column="1" HorizontalAlignment="Left" Margin="216,371,0,0" VerticalAlignment="Top" Width="75" Click="priorityBtn_Click" Height="23"/>
         <Button x:Name="delBtn" Content="Delete" Grid.Column="1" HorizontalAlignment="Left" Margin="97,389,0,0" VerticalAlignment="Top" Width="84" Click="delBtn_Click"/>
         <TextBox x:Name="descBox" Grid.Column="1" HorizontalAlignment="Left" Height="42" Margin="97,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
+        <wpfTool:TimePicker x:Name="TimeSelector" Grid.Column="1" HorizontalAlignment="Left" Margin="296,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.307,0.625" Width="91"/>
+        <DatePicker x:Name="DateSelector" Grid.Column="1" HorizontalAlignment="Left" Margin="285,82,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="156" SelectedDateFormat="Short"/>
     </Grid>
 </Window>

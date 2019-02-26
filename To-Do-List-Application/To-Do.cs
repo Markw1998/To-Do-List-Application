@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xceed.Wpf.Toolkit;
+
 namespace To_Do_List_Application
 {
     class To_Do
@@ -15,9 +17,9 @@ namespace To_Do_List_Application
             Tasks = new ObservableCollection<Task>();
         }
 
-        public void AddTask(string _taskName, string _taskDesc, string _taskCategory)
+        public void AddTask(string _taskName, string _taskDesc, string _taskCategory, DateTime _taskTimer, TimePicker _timeSelector)
         {
-            Task t = new Task(_taskName,_taskDesc, _taskCategory);
+            Task t = new Task(_taskName,_taskDesc, _taskCategory, _taskTimer, _timeSelector);
             Tasks.Add(t);
         }
 

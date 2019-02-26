@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using Xceed.Wpf.Toolkit;
+using System.Windows;
+using System;
+
 
 namespace To_Do_List_Application
 {
@@ -23,9 +26,11 @@ namespace To_Do_List_Application
             string input = inputTxt.Text;
             string type = typeCbx.SelectedItem.ToString();
             string desc = descBox.Text;
+            DateTime date = DateSelector.SelectedDate.Value;
+            TimePicker time = TimeSelector.Value;
 
 
-            myToDoList.AddTask(input,type,desc);
+            myToDoList.AddTask(input,type,desc, date, time);
             taskBox.Items.Refresh();
 
         }
@@ -34,7 +39,7 @@ namespace To_Do_List_Application
         {
             if (taskBox.SelectedIndex == -1)
             {
-                MessageBox.Show("Please select an Item first!");
+                System.Windows.MessageBox.Show("Please select an Item first!");
             }
             else
             {
@@ -48,7 +53,7 @@ namespace To_Do_List_Application
 
             if (taskBox.SelectedIndex == -1)
             {
-                MessageBox.Show("Please select an Item first!");
+                System.Windows.MessageBox.Show("Please select an Item first!");
             }
             else
             {
