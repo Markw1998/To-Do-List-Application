@@ -16,6 +16,7 @@ namespace To_Do_List_Application
         {
             InitializeComponent();
             taskBox.ItemsSource = myToDoList.Tasks;
+            Completedbx.ItemsSource = myToDoList.completedTasks;
             typeCbx.ItemsSource = types;
             typeCbx.SelectedIndex = 0;
 
@@ -64,7 +65,19 @@ namespace To_Do_List_Application
 
         private void compBtn_Click(object sender, RoutedEventArgs e)
         {
-           
+            
+            int index = taskBox.SelectedIndex;
+
+            if(index >= 0)
+            {
+                myToDoList.CompletedTasks(index);
+                Completedbx.Items.Refresh();
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            myToDoList.Clear();
         }
     }
 }

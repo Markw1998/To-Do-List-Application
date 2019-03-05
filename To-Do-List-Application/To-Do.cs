@@ -11,10 +11,12 @@ namespace To_Do_List_Application
     class To_Do
     {
         public ObservableCollection<Task> Tasks {get; set;}
+        public ObservableCollection<Task> completedTasks {get; set;}
 
         public To_Do()
         {
             Tasks = new ObservableCollection<Task>();
+            completedTasks = new ObservableCollection<Task>();
         }
 
         public void AddTask(string _taskName, string _taskDesc, string _taskCategory, DateTime _taskTimer)
@@ -39,7 +41,16 @@ namespace To_Do_List_Application
 
         public void CompletedTasks(int index)
         {
-            Task temp;
+            Task temp = Tasks[index];
+
+            Tasks.RemoveAt(index);
+
+            completedTasks.Add(temp);
+        }
+
+        public void Clear()
+        {
+            completedTasks.Clear();
         }
     }
 }
