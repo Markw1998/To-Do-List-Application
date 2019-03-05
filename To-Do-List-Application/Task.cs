@@ -13,22 +13,20 @@ namespace To_Do_List_Application
         public string taskCategory;
         public string taskDesc;
         public DateTime taskDate;
-        public TimePicker timeSelector;
 
 
-        public Task(string _taskName, string _taskCategory, string _taskDesc, DateTime _taskDate, TimePicker _timeSelector)
+        public Task(string _taskName, string _taskCategory, string _taskDesc, DateTime _taskDate)
         {
             taskName = _taskName;
             taskCategory = _taskCategory;
             taskDesc = _taskDesc;
             taskDate = _taskDate;
-            timeSelector = _timeSelector
         }
 
 
         public override string ToString()
         {
-            return string.Format($"•{taskName}{Environment.NewLine}{taskCategory}{Environment.NewLine}{taskDesc}{Environment.NewLine}{taskDate.ToShortDateString()}{Environment.NewLine}{timeSelector}");
+            return string.Format($"• {taskName}{Environment.NewLine}Category: {taskCategory} {Environment.NewLine}Description: {taskDesc} {Environment.NewLine}Date to be done: {taskDate.ToShortDateString()} {Environment.NewLine}");
         }
     }
 }

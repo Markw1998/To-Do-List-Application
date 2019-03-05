@@ -17,9 +17,9 @@ namespace To_Do_List_Application
             Tasks = new ObservableCollection<Task>();
         }
 
-        public void AddTask(string _taskName, string _taskDesc, string _taskCategory, DateTime _taskTimer, TimePicker _timeSelector)
+        public void AddTask(string _taskName, string _taskDesc, string _taskCategory, DateTime _taskTimer)
         {
-            Task t = new Task(_taskName,_taskDesc, _taskCategory, _taskTimer, _timeSelector);
+            Task t = new Task(_taskName,_taskDesc, _taskCategory, _taskTimer);
             Tasks.Add(t);
         }
 
@@ -35,6 +35,11 @@ namespace To_Do_List_Application
             temp = Tasks[index];
             Tasks.RemoveAt(index);
             Tasks.Insert(0, temp);
+        }
+
+        public void CompletedTasks(int index)
+        {
+            Task temp;
         }
     }
 }

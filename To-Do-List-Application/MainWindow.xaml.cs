@@ -27,10 +27,9 @@ namespace To_Do_List_Application
             string type = typeCbx.SelectedItem.ToString();
             string desc = descBox.Text;
             DateTime date = DateSelector.SelectedDate.Value;
-            TimePicker time = TimeSelector.Value;
 
 
-            myToDoList.AddTask(input,type,desc, date, time);
+            myToDoList.AddTask(input,type,desc, date);
             taskBox.Items.Refresh();
 
         }
@@ -61,6 +60,11 @@ namespace To_Do_List_Application
             }
 
             
+        }
+
+        private void compBtn_Click(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }
