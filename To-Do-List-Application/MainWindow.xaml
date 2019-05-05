@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         xmlns:local="clr-namespace:To_Do_List_Application"
         mc:Ignorable="d"
         Title="MainWindow" Height="480" Width="860" Background="#FF343D66" Foreground="Black">
@@ -37,10 +36,14 @@
             <Button x:Name="delBtn" Content="Delete" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="84" Click="delBtn_Click" Height="20" Grid.Row="2" Grid.Column="1"/>
         </StackPanel>
 
-        <ListBox x:Name="taskBox" HorizontalAlignment="Left" Height="258" Margin="10,1,0,0" VerticalAlignment="Top" Width="289" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <ListBox x:Name="Completedbx" HorizontalAlignment="Left" Height="258" Margin="0,1,0,0" VerticalAlignment="Top" Width="289" Grid.Column="3" Grid.Row="1"/>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="0,89,0,0" TextWrapping="Wrap" Text="Completed Tasks" VerticalAlignment="Top" FontSize="36" Grid.RowSpan="2" FontFamily="Kozuka Gothic Pro B" Foreground="White"/>
-        <Button x:Name="compBtn" Content="Completed" Grid.Column="2" HorizontalAlignment="Left" Margin="36,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="compBtn_Click"/>
-        <Button Content="Clear" Grid.Column="2" HorizontalAlignment="Left" Margin="35,84,0,0" Grid.Row="1" VerticalAlignment="Top" Width="76" Click="Button_Click"/>
+        <ListBox x:Name="taskBox" HorizontalAlignment="Left" Height="258" Margin="10,1,0,0" VerticalAlignment="Top" Width="288" Grid.Row="1" Grid.ColumnSpan="3"/>
+        <ListBox x:Name="Completedbx" HorizontalAlignment="Left" Height="258" Margin="10,0,0,0" VerticalAlignment="Top" Width="289" Grid.Column="3" Grid.Row="1"/>
+        <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="10,78,0,0" TextWrapping="Wrap" Text="Completed Tasks" VerticalAlignment="Top" FontSize="36" FontFamily="Kozuka Gothic Pro B" Foreground="White"/>
+        <Button x:Name="compBtn" Content="Completed" Grid.Column="2" HorizontalAlignment="Left" Margin="66,65,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="compBtn_Click"/>
+        <Button Content="Clear" Grid.Column="2" HorizontalAlignment="Left" Margin="65,155,0,0" Grid.Row="1" VerticalAlignment="Top" Width="76" Click="Button_Click"/>
+        <Button x:Name="SaveBtn" Content="Save" Grid.Column="2" HorizontalAlignment="Left" Margin="65,200,0,0" Grid.Row="1" VerticalAlignment="Top" Width="76" Click="Button_Click_2"></Button>
+        <Button Content="Edit" Grid.Column="2" HorizontalAlignment="Left" Margin="65,112,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Tasks Finished:" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <TextBlock x:Name="tasksFinishedTxt" Grid.Column="3" HorizontalAlignment="Left" Margin="142,16,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" Foreground="White"/>
     </Grid>
 </Window>

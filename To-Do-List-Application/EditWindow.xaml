@@ -1,0 +1,40 @@
+﻿<Window x:Class="To_Do_List_Application.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:To_Do_List_Application"
+        mc:Ignorable="d"
+        Title="EditWindow" Height="450" Width="800" Background="#FF343D66">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="1" Text="Edit Your Task" HorizontalAlignment="Center" Foreground="White" FontSize="24" FontWeight="Bold"></TextBlock>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1" Margin="10,10,10,10">
+            <TextBlock Text="Task Name:" HorizontalAlignment="Right" Margin="10" Foreground="White"/>
+            <TextBlock Text="Category:" HorizontalAlignment="Right" Margin="10" Foreground="White"/>
+            <TextBlock Text="Date Due:" HorizontalAlignment="Right" Margin="10" Foreground="White" ></TextBlock>
+            <TextBlock Text="Description:" HorizontalAlignment="Right" Margin="10" Foreground="White"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="10">
+            <TextBox x:Name="taskNameBx" Margin="10"></TextBox>
+            <ComboBox x:Name="categoryCbx" Margin="10,10,76,10" Height="20"></ComboBox>
+            <DatePicker x:Name="DatePick" Margin="10,0,51,0"></DatePicker>
+            <TextBox x:Name="descBox" Margin="10" Height="94" ></TextBox>
+            <Button Content="Finished" Margin="48,10,51,10" Click="Button_Click"></Button>
+            <Button Content="Go Back" Margin="48,10,51,10" Click="Button_Click_1"></Button>
+        </StackPanel>
+
+    </Grid>
+</Window>

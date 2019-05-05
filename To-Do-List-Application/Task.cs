@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using Xceed.Wpf.Toolkit;
 
 namespace To_Do_List_Application
 {
-    class Task
+   public class Task
     {
         public string taskName;
         public string taskCategory;
